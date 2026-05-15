@@ -17,7 +17,7 @@ def create_power_curve(file_path):
     # Absteigend für Kurve
     sorted_power_desc = sorted_power[::-1]
 
-    # X = Rang
+    # X = Time
     x = np.arange(1, len(sorted_power_desc) + 1)
 
     # Plot
@@ -25,8 +25,8 @@ def create_power_curve(file_path):
     plt.plot(x, sorted_power_desc, label="Power")
 
     plt.xlabel("Rank")
-    plt.ylabel("Power (W)")
-    plt.title("Sorted Power Curve")
+    plt.ylabel("Power (W)") 
+    plt.title("Sorted Power Curve") 
     plt.grid(True)
     plt.legend()
 

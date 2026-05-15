@@ -1,21 +1,20 @@
 
+def bubble_sort(data):
 
-def bubble_sort(arr):
+    n = len(data)
 
-    n = len(arr)
-
-    # Outer loop for each pass
+    #Schleife welche jedes Elemente des Arrays durchlaeuft
     for i in range(n):
-        swapped = False # Flag to detect if any swap occurs
+        swapped = False #Variable swapped: Solange False bis die Liste sortiert ist
 
-    # Inner loop for comparing adjacent elements
+    #Sortieralgorithmus
         for j in range(0, n - i - 1):
-            # Compare and swap if elements are out of order
-            if arr[j] > arr[j + 1]:
-                arr[j], arr[j + 1] = arr[j + 1], arr[j]
-                swapped = True
+            # Elemente des Arrays werden verglichen und getauscht, falls die Anordnung nicht passt
+            if data[j] > data[j + 1]:
+                data[j], data[j + 1] = data[j + 1], data[j]
+                swapped = True 
 
-             # If no swaps occurred, the list is already sorted
+             # Wenn die Variable swapped True wird ist die Liste geordnet und die Funktion wird beendet
         if not swapped:
             break
-    return arr
+    return data #geordnete Liste wird zurueckgegeben
